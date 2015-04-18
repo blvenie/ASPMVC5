@@ -26,5 +26,10 @@ namespace ASPMVC5.Controllers
 
             return View();
         }
+        public ActionResult Profile()
+        {
+
+            return View();
+        }
     }
 }
