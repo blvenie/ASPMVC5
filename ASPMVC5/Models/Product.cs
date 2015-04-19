@@ -11,11 +11,7 @@ namespace ASPMVC5.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
-    /// <summary>
-    /// 轉換強型別
-    /// </summary>
     public partial class Product
     {
         public Product()
@@ -24,19 +20,11 @@ namespace ASPMVC5.Models
         }
     
         public int ProductId { get; set; }
-        //驗證前後端
-        //[Required(ErrorMessage="請輸入")]
-        //多國語系 --如要使用要加入WEB.config 
-        [Required(ErrorMessageResourceType=typeof(Resources.ProductResource),ErrorMessageResourceName="ProductName")]
-        [StringLength(5,ErrorMessage="長度不可大於5")]
         public string ProductName { get; set; }
-        [Required]
         public Nullable<decimal> Price { get; set; }
-        [Required]
         public Nullable<bool> Active { get; set; }
-        [Required]
         public Nullable<decimal> Stock { get; set; }
-        [Required]    
+    
         public virtual ICollection<OrderLine> OrderLine { get; set; }
     }
 }

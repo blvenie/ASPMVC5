@@ -45,5 +45,15 @@ namespace ASPMVC5.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_Fabrics_Result>("usp_Fabrics", createClientsParameter, createOrdersParameter);
         }
+    
+        public virtual ObjectResult<Product> SP_QueryClient()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Product>("SP_QueryClient");
+        }
+    
+        public virtual ObjectResult<Product> SP_QueryClient(MergeOption mergeOption)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Product>("SP_QueryClient", mergeOption);
+        }
     }
 }
