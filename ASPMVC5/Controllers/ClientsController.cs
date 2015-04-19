@@ -14,6 +14,16 @@ namespace ASPMVC5.Controllers
     {
         private FabricsEntities1 db = new FabricsEntities1();
 
+        
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(LoginVM Data)
+        {
+            return View("LoginRerurn", Data);
+        }
         // GET: Clients
         public ActionResult Index()
         {
