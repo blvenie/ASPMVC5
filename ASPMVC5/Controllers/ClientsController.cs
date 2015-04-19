@@ -19,6 +19,7 @@ namespace ASPMVC5.Controllers
         {
             return View();
         }
+        //使用ViewModel,不寫入DB
         [HttpPost]
         public ActionResult Login(LoginVM Data)
         {
